@@ -7,13 +7,13 @@
 
 **Resources you have researched**
  
-   *Peer Play*
+*Peer Play*
 
 - [Microphone Input Visuals Tutorial](https://www.youtube.com/watch?v=GHc9RF258VA)
 - [Music Visualization](https://www.youtube.com/watch?v=eTP_8NXwyNE)
 - [Underwater World Shader](https://www.youtube.com/watch?v=v15C8SbTTac)
 
-   *Brackeys*
+*Brackeys*
 
 - [PROCEDURAL TERRAIN in Unity](https://www.youtube.com/watch?v=64NblGkAabk)
 - [MESH COLOR in Unity](https://www.youtube.com/watch?v=lNyZ9K71Vhc)
