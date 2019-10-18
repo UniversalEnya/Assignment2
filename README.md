@@ -1,6 +1,6 @@
 **I plan to**
 
-- [x] Create a project which contains a water themed world that spawns randomly generated structures when the scene opens at random posistions.
+- [ ] Create a project which contains a water themed world that spawns randomly generated structures when the scene opens at random posistions.
 - [ ] Interactable glowing blocks or areas. 
 - [ ] An underwater room while be spawned at 0,0, this location will behave as an explorable music/sound visualiser.
 - [ ] Waterstreams that look pretty and speed you up when you travel insiide them. 
