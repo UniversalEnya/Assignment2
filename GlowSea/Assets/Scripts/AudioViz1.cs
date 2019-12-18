@@ -14,8 +14,8 @@ public class AudioViz1 : MonoBehaviour
     }
 
     //public float radius = 50;
-    public float boxWidth = 9;
-    public float boxLength = 9;
+    public float boxWidth = 8;
+    public float boxLength = 8;
 
     void CreateVisualisers()
     {
@@ -23,31 +23,34 @@ public class AudioViz1 : MonoBehaviour
 
         for (int i = 0; i < AudioAnalyzer.frameSize; i++)
         {
-            Vector3 pos = new Vector3
-                (
-                    (boxWidth / (float)AudioAnalyzer.frameSize) * i
-                    , 0
-                    , 0 //(boxLength / (float)AudioAnalyzer.frameSize) * i 
-                );
-            pos = transform.TransformPoint(pos);
+            for (int x = 0; x <= boxWidth; x++)
+            {
+                for (int y = 0; y <= boxLength; y++)
+                {
+                    Vector3 pos = new Vector3
+                        ( 
+                           x, y, 0              
+                        );
+                    pos = transform.TransformPoint(pos);
 
-            Quaternion quat = Quaternion.AngleAxis(1 * i * Mathf.Rad2Deg, Vector3.up);
+                    Quaternion quat = Quaternion.AngleAxis(1 * i * Mathf.Rad2Deg, Vector3.up);
 
-            GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            cube.transform.position = pos;
-            cube.transform.parent = this.transform;
+                    GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                    cube.transform.position = pos;
+                    cube.transform.parent = this.transform;
 
-            cube.GetComponent<Renderer>().material.color = Color.HSVToRGB
-                (
-                    i / (float)AudioAnalyzer.frameSize
-                    , 1
-                    , 1
-                );
-            elements.Add(cube);
+                    cube.GetComponent<Renderer>().material.color = Color.HSVToRGB
+                        (
+                            i / (float)AudioAnalyzer.frameSize, 1, 1
+                        );
+                    elements.Add(cube);
+                }
+            }
+           
         }
     }
+    
 
-    // Update is called once per frame
     void Update()
     {
         for (int i = 0; i < elements.Count; i++)
