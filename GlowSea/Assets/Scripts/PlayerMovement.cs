@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float speed = 5f;
-    float rotSpeed = 45f;
+    float speed = 10f;
+    float rotSpeed = 120f;
 
     public void Update()
     {
@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
 
     void movementInput()
     {
-        
+        transform.Translate(0, 0, Input.GetAxis("Jump") * Time.deltaTime * speed);
+
+        transform.Rotate(Input.GetAxis("Vertical") * (-1) * Time.deltaTime * rotSpeed, 0, 0);
+        transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * rotSpeed, 0);
     }
 }
