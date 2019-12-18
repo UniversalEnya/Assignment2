@@ -7,6 +7,11 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 10f;
     public float rotSpeed = 120f;
 
+    private void Start()
+    {
+        transform.position = new Vector3(Random.Range(-90, 90), 50, Random.Range(-90, 90));
+    }
+
     public void Update()
     {
         movementInput();
