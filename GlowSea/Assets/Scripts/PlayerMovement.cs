@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float speed = 10f;
-    float rotSpeed = 120f;
+    public float speed = 10f;
+    public float rotSpeed = 120f;
 
     public void Update()
     {
